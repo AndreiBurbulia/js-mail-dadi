@@ -33,3 +33,11 @@ for (i = 0; i < numeroRound; i++) {
     }
 
 }
+
+if (vittorieGiocatore > vittoriePc) {
+    document.getElementById("risultato_finale").innerHTML = "Il giocatore ha accumulato piu vittorie!! Ha vinto con " + vittorieGiocatore + " round vinti!"
+} else if (vittorieGiocatore == vittoriePc) {
+    document.getElementById("risultato_finale").innerHTML = "Il risultato finale dei round è pari!! " + pareggi + " totali!"
+} else {
+    document.getElementById("risultato_finale").innerHTML = "Il Pc ha accumulato piu vittorie!! " + vittoriePc + " round vinti!"
+}
