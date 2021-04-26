@@ -1,21 +1,35 @@
-//Generiamo due numeri random da 1 a 6 per i due utenti
-var numeroGiocatore = Math.floor(Math.random() * 6) + 1;
-document.getElementById("giocatore_uno").innerHTML = numeroGiocatore;
-var numeroPc = Math.floor(Math.random() * 6) + 1;
-document.getElementById("giocatore_due").innerHTML = numeroPc;
 
 
 
-
-
-//stabilire chi è il vincitore in base ai numeri che sono usciti
+//Inizializzazione delle variabili che mi serviranno successivamente
 var vittorieGiocatore = 0;
-if (numeroGiocatore > numeroPc) {
-    document.getElementById("vincitore").innerHTML = "Giocatore!";
+var pareggi = 0;
+var vittoriePc = 0;
+var numeroRound = parseInt(prompt("Inserisci il numero di Round da fare!"))
 
-} else if (numeroGiocatore == numeroPc) {
-    document.getElementById("vincitore").innerHTML = "Nessuno! Pari!";
-} else {
-    document.getElementById("vincitore").innerHTML = "Pc!";
+
+for (i = 0; i < numeroRound; i++) {
+
+    //Generiamo due numeri random da 1 a 6 per i due utenti
+    var numeroGiocatore = Math.floor(Math.random() * 6) + 1;
+    document.getElementById("giocatore_uno").innerHTML = numeroGiocatore;
+    var numeroPc = Math.floor(Math.random() * 6) + 1;
+    document.getElementById("giocatore_due").innerHTML = numeroPc;
+
+    //stabilire chi è il vincitore in base ai numeri che sono usciti
+
+    if (numeroGiocatore > numeroPc) {
+        document.getElementById("vincitore").innerHTML = "Giocatore!";
+        vittorieGiocatore = vittorieGiocatore + 1;
+        document.getElementById("vittorie_giocatore").innerHTML = vittorieGiocatore;
+    } else if (numeroGiocatore == numeroPc) {
+        document.getElementById("vincitore").innerHTML = "Pari!";
+        pareggi = pareggi + 1;
+        document.getElementById("pareggi").innerHTML = pareggi;
+    } else {
+        document.getElementById("vincitore").innerHTML = "Pc!";
+        vittoriePc = vittoriePc + 1;
+        document.getElementById("vittorie_pc").innerHTML = vittoriePc;
+    }
 
 }
