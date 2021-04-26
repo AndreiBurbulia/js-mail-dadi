@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    margin: 3rem;
+    height: 200px;
+    width: 70%;
+    background-color: coral;
+    border: 2px solid red;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box p{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.box span{
+    display: block;
+}
